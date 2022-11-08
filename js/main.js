@@ -45,7 +45,6 @@ async function makeReq() {
     }
     const winnerWait = await winner()
     console.log(data)
-    document.querySelector(".result").classList.add('result alert alert-primary')
     document.querySelector(".result").innerHTML = winnerWait
     toggleButton()
 }
