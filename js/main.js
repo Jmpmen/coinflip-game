@@ -7,20 +7,6 @@ Array.from(play).forEach((element)=>{
 })
 // document.querySelectorAll('.btn').addEventListener('click', makeReq)
 
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
-const alert = (message, type) => {
-  const wrapper = document.createElement('div')
-  wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-    `   <div>${message}</div>`,
-    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-    '</div>'
-  ].join('')
-
-  alertPlaceholder.append(wrapper)
-}
-
 function toggleButton(){
   Array.from(play).forEach((element)=>{
     if (!element.disabled){
@@ -59,13 +45,7 @@ async function makeReq() {
     }
     const winnerWait = await winner()
     console.log(data)
-    // document.querySelector(".result").innerHTML = winnerWait
-    const alertTrigger = document.getElementById('liveAlertBtn')
-      if (alertTrigger) {
-        alertTrigger.addEventListener('click', () => {
-          alert(winnerWait)
-        })
-      }
+    document.querySelector(".result").innerHTML = winnerWait
     toggleButton()
 }
 
