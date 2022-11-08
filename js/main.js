@@ -1,7 +1,7 @@
 // document.querySelector('#clickMe').addEventListener('click', makeReq)
 
 
-const play = document.querySelectorAll('.btn')
+const play = document.querySelectorAll('.button')
 Array.from(play).forEach((element)=>{
   element.addEventListener('click', makeReq)
 })
