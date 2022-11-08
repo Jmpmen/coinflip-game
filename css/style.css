@@ -47,7 +47,11 @@ h1{
 
 .buttons{
   flex: 2 0 50%;
-  height: 10rem;
+}
+
+.button{
+  width: 10rem;
+  margin: 2rem;
 }
 
 .container {
@@ -57,7 +61,6 @@ h1{
 }
 
 #coin {
-  width: 12rem;
   position: relative;
   transform-style: preserve-3d;
 }
